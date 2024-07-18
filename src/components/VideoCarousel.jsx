@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { hightlightsSlides } from '../constants'
 
 const VideoCarousel = () => {
@@ -14,8 +14,38 @@ const VideoCarousel = () => {
         isPlaying: false,
       });
 
+      cont [loadedData, setLoadedData] = useState([]);
+
       const [loadedData, setLoadedData] = useState([]);
-      const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video;
+      const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video; 
+
+      useEffect(() => {
+        if (loadedData.length > 3) {
+          if (!isPlaying) {
+            videoRef.current[videoId].pause();
+          } else {
+            startPlay && videoRef.current[videoId].play();
+          }
+        }
+      }, [startPlay, videoId, isPlaying, loadedData]);
+
+      useEffect(() => {
+        const currentProgress = 0;
+        let span = videoSpanRef.current;
+
+        if(span[videoId]) {
+            let anim = gsap.ticker(span[videoId], {
+                onUpdate: () => {
+
+                },
+
+                onComplete: () => {
+
+                }
+            })
+        }
+
+      }, [videoId, startPlay])
 
   return (
     <>
@@ -26,7 +56,7 @@ const VideoCarousel = () => {
                 <div className="w-fill h-full flex-center rounded-3xl overflow-hidden bg-black">
                     <video
                         id="video"
-                        playinline={true}
+                        playsInline={true}
                         preload='auto'
                         muted
                     >
