@@ -28,7 +28,7 @@ const Lights = () => {
             scale={10}
             rotation-y={Math.PI / 2}
           />
-          <Lightformer 
+          <Lightformer
             form="rect"
             intensity={10}
             position={[10, 0, 1]}
@@ -70,4 +70,4 @@ const Lights = () => {
   );
 };
 
-export default Lights; 
+export default Lights;
