@@ -39,17 +39,16 @@ Ensure you have the following installed:
 git clone https://github.com/LewyMacknold1995/Apple_clone.git
 cd iphone-doc
 
-🛠️ Installation
+### 🛠️ Installation
 Install the project dependencies using npm:
 
-bash
-Copy code
+```bash
 npm install
-🚀 Running the Project
+
+### 🚀 Running the Project
 Run the development server:
 
-bash
-Copy code
+```bash
 npm run dev
 Open http://localhost:5173 in your browser to view the project.
 
