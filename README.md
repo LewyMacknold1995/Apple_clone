@@ -41,14 +41,10 @@ cd iphone-doc
 
 ### 🛠️ Installation
 Install the project dependencies using npm:
-
-```bash
 npm install
 
 ### 🚀 Running the Project
 Run the development server:
-
-```bash
 npm run dev
 Open http://localhost:5173 in your browser to view the project.
 
