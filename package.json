@@ -2,6 +2,7 @@
   "name": "apple",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://lewymacknold1995.github.io/Apple_clone", 
   "type": "module",
   "scripts": {
     "dev": "vite",
